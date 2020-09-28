@@ -20,7 +20,17 @@ namespace LinqArrayList
             var arrList1 = from aList in arrList
                          where (aList.Age < 24)
                          select aList;
+            var sapxep = from aList1 in arrList
+                         where (aList1.Age < 24)
+                         orderby aList1.Name
+                         select aList1;
+
             foreach (var item in arrList1)
+            {
+                Console.WriteLine("ID :" + item.Id + " Name : " + item.Name + " Age : " + item.Age);
+            }
+             Console.WriteLine("Sap xep theo ten :");
+            foreach (var item in sapxep)
             {
                 Console.WriteLine("ID :" + item.Id + " Name : " + item.Name + " Age : " + item.Age);
             }
